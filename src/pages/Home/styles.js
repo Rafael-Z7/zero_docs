@@ -69,28 +69,31 @@ export const Main = styles.div`
 
 export const Content = styles.div`
     width: 75%;
-    
+  
     margin-top: 50px;
-    background-color: rgb(91,155,213);
+    background-color: #f2f2f2;;
     border-right: 2px solid white;
     border-top: 1px solid white;
     display: flex;
     flex-direction: column;
+    
 
-    h1{
+    h2{
         text-align: center;
-        color: white;
+        color: black;
         font-family: 'Roboto', sans-serif;
+        margin-top: 12vh;
     }
 
     p{
-        color: white;
         text-align: justify;
         text-indent: 20px;
         margin-right: 10%;
         margin-left: 10%;
         font-size: 16px;
-        font-weight: 9px;
+        line-height: 1.6;
+      
+        font-family: 'arial', sans-serif;
     }
 `
 export const Aside = styles.aside`
@@ -124,5 +127,8 @@ export const Aside = styles.aside`
 
     li:hover{
         color: rgb(26,66,102);
+        transition: 0.3s;
     }
+
+    
 `

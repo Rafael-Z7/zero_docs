@@ -43,7 +43,7 @@ export const Navbar = styles.div`
 
     li{
     
-        margin-right: 20px;
+        margin-right: 25px;
         list-style: none;
         color: white;
         text-transform: uppercase;
@@ -73,5 +73,6 @@ export const LinkStyle = styles(Link)`
         color: rgb(26,66,102)
     }
     text-decoration: none;
+    transition: 0.3s;
 `
      

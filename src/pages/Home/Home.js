@@ -40,7 +40,7 @@ function Home(){
                     </ul>
                 </Aside>
                 <Content>
-                    <h1>{title}</h1>
+                    <h2>{title}</h2>
                     <p>{text}
                      </p>
                 </Content>

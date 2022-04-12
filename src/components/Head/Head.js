@@ -11,6 +11,7 @@ function Head(){
             <h1>Gestão eletrônica de documentos</h1>
             <Navbar>
                 <ul>
+                    <li><LinkStyle to="/">Home</LinkStyle></li> 
                     <li><LinkStyle to="/content">Informativos</LinkStyle></li> 
                     <li><LinkStyle to="/content">Fluxogramas</LinkStyle></li>
                     <li><LinkStyle to="/content">Formularios</LinkStyle></li>
@@ -18,7 +19,7 @@ function Head(){
                     <li><LinkStyle to="/content">Protocolos</LinkStyle></li>
                     <li><LinkStyle to="/content">Regimentos</LinkStyle></li>
                     <li><LinkStyle to="/content">Termos</LinkStyle></li>
-                    <li><LinkStyle to="/content">Fique por dentro</LinkStyle></li>
+                    
                 </ul>
         </Navbar>
     </Menu>

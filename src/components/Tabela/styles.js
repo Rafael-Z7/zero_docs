@@ -39,7 +39,7 @@ export const Container = styles.div`
 export const Table = styles.table`
   th, td {
     border-right: 1px solid black;
-   
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
   }
   
     border-collapse: collapse;
@@ -47,6 +47,8 @@ export const Table = styles.table`
 
     th {
         text-transform: uppercase;
+        border-bottom: 1px solid black;
+        height: 50px
     }
 
     td{

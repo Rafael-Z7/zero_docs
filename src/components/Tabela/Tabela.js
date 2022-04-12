@@ -6,10 +6,11 @@ function Tabela(){
     return(
         <Main>
         <Container>
+            <h2 style={{textAlign: "center", marginBottom: '25px'}}>INFORMATIVOS</h2>
             <Table>
                 <thead>
                       <th style={{width: '40%'}}>codigo</th>
-                      <th style={{width: '45%'}}>titulo procedimentos</th>
+                      <th style={{width: '45%'}}>titulo do procedimentos</th>
                       <th>setor</th>
                 </thead>
                 <tbody>
