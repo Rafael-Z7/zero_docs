@@ -47,6 +47,7 @@ export const Navbar = styles.div`
         text-transform: uppercase;
         font-family: 'Roboto Slab', sans-serif;
         font-weight: bold;
+        cursor: pointer;
        
 
     }
@@ -59,7 +60,7 @@ export const Navbar = styles.div`
 
 export const Main = styles.div`
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     background-color: rgb(26,66,102);
     margin-top: 0;
     display: flex;
@@ -76,8 +77,6 @@ export const Content = styles.div`
     display: flex;
     flex-direction: column;
 
-   
-    
     h1{
         text-align: center;
         color: white;
@@ -90,13 +89,12 @@ export const Content = styles.div`
         text-indent: 20px;
         margin-right: 10%;
         margin-left: 10%;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 9px;
     }
 `
 export const Aside = styles.aside`
     width: 14%;
-     
     background-color: rgb(91,155,213);
     margin-top: 50px;
     border-right: 1px solid white;
@@ -120,6 +118,8 @@ export const Aside = styles.aside`
         border-bottom: 1px solid white;
         text-align: start;
         text-transform: uppercase;
+        color: white;
+        cursor: pointer;
     }
 
     li:hover{
