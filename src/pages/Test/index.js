@@ -7,30 +7,24 @@ function Test(){
     const [Files,setFiles] = useState();
 
     const renderDragMessage = useCallback((isDragActive, isDragReject) => {
- 
-     
+
         if (!isDragActive) {
             return (
               <div>Selecione ou arraste o arquivo aqui.</div>
             );
           }
-    
 
-          if (isDragReject) {
+        if (isDragReject) {
             return <div type="error">Arquivo não suportado</div>;
           }
 
-      
-          return <div type="success">Solte o arquivo aqui</div>;
+        return <div type="success">Solte o arquivo aqui</div>;
       
       }, [])
 
-
-      
- 
     const  onUpload =   useCallback( (files) => { 
        setFiles(files);
-        
+
     }, [])
 
 
@@ -48,8 +42,6 @@ function Test(){
                         isDragActive={isDragActive}
                         isDragReject={isDragReject}
                         isDragAccept = {isDragAccept}
-                    
-                        
                     >
                          
                         <input {...getInputProps()} data-testid="upload" />

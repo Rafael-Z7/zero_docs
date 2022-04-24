@@ -67,8 +67,6 @@ export const FormContainer = styles.div`
  
 ` 
 
-
-
 export const InputStyle = styles.input`
 width: 50%;
 height: 5%;
