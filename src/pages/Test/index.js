@@ -27,13 +27,12 @@ function Test(){
 
     }, [])
 
-
     return(
         <Main>
             <ContainerMaster>
             <DropZone 
             
-                    accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, text/xml, text/xls, text/xlsx,  text/csv"  
+                    accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, text/xml, text/xls, text/xlsx,  text/csv, application/pdf"  
                     onDropAccepted={(files) => onUpload(files)}
                 >
                             {({ getRootProps, getInputProps, isDragActive, isDragReject, isDragAccept }) => (
