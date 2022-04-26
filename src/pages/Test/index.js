@@ -1,10 +1,19 @@
-import React, {useCallback,useState} from 'react'
+import React, {useCallback,useState, useEffect} from 'react'
 import {Main, DragArea, FormStyle, FormContainer,ContainerMaster,InputStyle, Button} from './styles';
 import DropZone from 'react-dropzone'
+import Data from '../Home/data.js'
 
 function Test(){
-
+    const [ds_reg_doc, setRegDoc] = useState('');
+    const [path, setDoc] = useState('');
+    const [setor, setSetor] = useState('');
+    const [localidade, setLocalidade] = useState('');
+    const [Public, setPublic] = useState();
     const [Files,setFiles] = useState();
+
+    useEffect(() =>{
+
+    })
 
     const renderDragMessage = useCallback((isDragActive, isDragReject) => {
 
@@ -26,6 +35,13 @@ function Test(){
        setFiles(files);
 
     }, [])
+
+
+    const Onsubmit = () =>{
+
+    }
+
+ 
 
     return(
         <Main>
@@ -52,33 +68,26 @@ function Test(){
             </DropZone> 
 
             <FormContainer style={{display: Files ? 'flex' : 'none'}}>
-                <FormStyle>
-                <label>Nome do arquivo</label>
-                        <InputStyle  placeholder="Nome do arquivo" />
+                <FormStyle onSubmit={Onsubmit}>
+                    <label></label>
+                       <label>NOME DO ARQUIVO</label>
+                        <InputStyle  placeholder="Nome do arquivo" value={ds_reg_doc}  onChange={e => setRegDoc(e.target.value)}/>
+                        <label> INFORME O SETOR</label> 
+                        <InputStyle  placeholder="Setor"  value={setor} onChange={e => setSetor(e.target.value)}/>
                         <div  style={{width: '100%', height: '15%', display: 'flex', alignItems: 'center', flexDirection: 'column'}}> 
-                        <label  >Localidade</label> 
-                            <select>
-                                
-                                <option value="name">name</option>
-                                <option value="name2">name2</option>
-                                <option value="name2">name3</option>
-                                <option value="name2">name4</option>
+                        <label>SELECIONE A LOCALIDADE</label> 
+                            <select onChange={e => setLocalidade(e.target.selected)}> 
+                                 <option value={'INFORMATIVOS'}>INFORMATIVOS</option>
+                                 <option value={'FLUXOGRAMAS'}>FLUXOGRAMAS</option>
+                                 <option value={'FORMULARIOS'}>FORMULARIOS</option>
+                                 <option value={'PROCEDIMENTOS'}>PROCEDIMENTOS</option>
+                                 <option value={'PROTOCOLOS'}>PROTOCOLOS</option>
+                                 <option value={'REGIMENTOS'}>REGIMENTOS</option>
+                                 <option value={'TERMOS'}>TERMOS</option>
                             </select>
                         </div>
 
-                        <div style={{width: '100%', height: '15%',  margin: '20px',  display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
-                            <label>Setor</label>
-                            <select>
-                                <option value="setor1">setor1</option>
-                                <option value="name2">setor1</option>
-                                <option value="name2">setor1</option>
-                                <option value="name2">setor1</option>
-                                <option value="name2">setor1</option>
-                                <option value="name2">setor1</option>
-                                <option value="name2">setor1</option>
-                                <option value="name2">setor1</option>
-                            </select>
-                        </div>
+                       
                         <Button>
                             <input type="submit"  value="Enviar " /> 
                         </Button>
